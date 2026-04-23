@@ -1,0 +1,92 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body { font-family: sans-serif; background: #f4f6f9; color: #222; }
+
+.app { display: flex; flex-direction: column; height: 100vh; }
+
+.header { display: flex; justify-content: space-between; align-items: center; background: #003366; color: white; padding: 12px 24px; }
+
+.header-left { display: flex; align-items: center; gap: 12px; }
+
+.logo { background: white; color: #003366; font-weight: bold; padding: 6px 10px; border-radius: 8px; font-size: 14px; }
+
+.header-title { font-size: 16px; font-weight: 600; }
+
+.header-sub { font-size: 12px; opacity: 0.7; }
+
+nav button { background: transparent; color: white; border: 1px solid rgba(255,255,255,0.4); padding: 6px 16px; border-radius: 20px; cursor: pointer; margin-left: 8px; }
+
+nav button.active { background: white; color: #003366; }
+
+main { flex: 1; overflow: hidden; display: flex; justify-content: center; padding: 20px; }
+
+.chat-container { display: flex; flex-direction: column; width: 100%; max-width: 720px; height: 100%; }
+
+.category-bar select { width: 100%; padding: 8px 12px; border-radius: 8px; border: 1px solid #ddd; margin-bottom: 12px; font-size: 14px; }
+
+.messages { flex: 1; overflow-y: auto; display: flex; flex-direction: column; gap: 10px; padding-right: 4px; }
+
+.message { display: flex; }
+
+.message.user { justify-content: flex-end; }
+
+.bubble { max-width: 75%; padding: 10px 14px; border-radius: 16px; font-size: 14px; line-height: 1.5; }
+
+.message.bot .bubble { background: white; border: 1px solid #e0e0e0; border-radius: 4px 16px 16px 16px; }
+
+.message.user .bubble { background: #003366; color: white; border-radius: 16px 4px 16px 16px; }
+
+.submit-box { background: white; border: 1px solid #ddd; border-radius: 12px; padding: 16px; margin: 12px 0; }
+
+.submit-box p { font-size: 13px; color: #555; margin-bottom: 10px; }
+
+.submit-box select, .submit-box textarea { width: 100%; padding: 8px; border: 1px solid #ddd; border-radius: 8px; font-size: 13px; margin-bottom: 8px; }
+
+.submit-box textarea { height: 80px; resize: none; }
+
+.submit-box button { background: #003366; color: white; border: none; padding: 8px 20px; border-radius: 8px; cursor: pointer; }
+
+.submit-msg { font-size: 13px; color: green; text-align: center; }
+
+.input-bar { display: flex; gap: 8px; margin-top: 12px; }
+
+.input-bar input { flex: 1; padding: 10px 14px; border-radius: 24px; border: 1px solid #ddd; font-size: 14px; outline: none; }
+
+.input-bar button { background: #003366; color: white; border: none; padding: 10px 20px; border-radius: 24px; cursor: pointer; font-size: 14px; }
+
+.admin-login { max-width: 360px; margin: 60px auto; background: white; padding: 32px; border-radius: 16px; border: 1px solid #ddd; display: flex; flex-direction: column; gap: 12px; }
+
+.admin-login h2 { text-align: center; color: #003366; }
+
+.admin-login input { padding: 10px; border: 1px solid #ddd; border-radius: 8px; font-size: 14px; }
+
+.admin-login button { background: #003366; color: white; border: none; padding: 10px; border-radius: 8px; cursor: pointer; font-size: 14px; }
+
+.error { color: red; font-size: 13px; }
+
+.admin-panel { width: 100%; max-width: 720px; }
+
+.admin-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px; }
+
+.admin-header button { background: #cc0000; color: white; border: none; padding: 6px 16px; border-radius: 8px; cursor: pointer; }
+
+.pending-card { background: white; border: 1px solid #ddd; border-radius: 12px; padding: 16px; margin-bottom: 12px; }
+
+.pending-category { font-size: 11px; font-weight: 600; color: #003366; text-transform: uppercase; margin-bottom: 6px; }
+
+.pending-question, .pending-answer { font-size: 14px; margin-bottom: 6px; }
+
+.pending-actions { display: flex; gap: 8px; margin-top: 10px; }
+
+.approve { background: #003366; color: white; border: none; padding: 6px 16px; border-radius: 8px; cursor: pointer; }
+
+.reject { background: #cc0000; color: white; border: none; padding: 6px 16px; border-radius: 8px; cursor: pointer; }
+
+.success-msg { color: green; font-size: 13px; margin-bottom: 12px; }
+
+.empty { color: #888; font-size: 14px; }
+.typing { display: flex; gap: 4px; align-items: center; padding: 12px 16px; }
+.typing span { width: 8px; height: 8px; background: #003366; border-radius: 50%; animation: bounce 1.2s infinite; }
+.typing span:nth-child(2) { animation-delay: 0.2s; }
+.typing span:nth-child(3) { animation-delay: 0.4s; }
+@keyframes bounce { 0%, 60%, 100% { transform: translateY(0); } 30% { transform: translateY(-8px); } }

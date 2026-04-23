@@ -1,0 +1,13 @@
+__pycache__/
+*.pyc
+backend/venv/
+venv/
+.env
+backend/.env
+backend/data/rag_index.pkl
+backend/documents/
+node_modules/
+frontend/node_modules/
+dist/
+build/
+.DS_Store
